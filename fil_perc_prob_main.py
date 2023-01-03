@@ -22,7 +22,7 @@ def get_T(dt, Vapp):
     Vi      =   Vapp/nI
     
     return T0 + Vi**2/(RI)*dt
-    return T0 + Vi**2/(RI*K)*(1 - np.exp(-K/C*dt))
+    #return T0 + Vi**2/(RI*K)*(1 - np.exp(-K/C*dt))
     
 def get_Eb(T):
     Tnorm   =   np.array([t if t < Timt else Timt for t in T])
@@ -49,29 +49,36 @@ for dt in dtArr:
         PList.append(get_P(dt, Vapp))
     ax.plot(VappArr, PList, label=r'$\Delta t=$'+str(dt))
 
+ax.set(xlabel='Vapp', ylabel='P')
+ax.xaxis.label.set_size(22)
+ax.yaxis.label.set_size(22) 
 ax.legend()
+#plt.legend(prop={'size': 16})  
+fig.tight_layout()
 plt.savefig('P(Vapp, dt).pdf') 
-plt.close()
+plt.clf()
 
 # Filament length
 
 print('Doing filament length...')
 
+fig, ax = plt.subplots()
+
 dtArr       =   np.arange(0, 4e3, 1)
 VappArr     =   [10., 20., 30., 40., 50.] 
 
-nTrials     =   2
+nTrials     =   1
 
-fig, ax = plt.subplots()
+r_dtArr     =   [np.random.rand() for i in dtArr]
 
 for Vapp in VappArr:
     print('Vapp='+str(Vapp))    
     lenFil  =   []      # Filament length     
     for n in range(nTrials):
         print(str(100*n/nTrials)+'% runs', end='\r') 
-        r           =   np.random.rand()
+        #r           =   np.random.rand()
         lenFil_n    =   [0]
-        for dt in dtArr:
+        for dt, r in zip(dtArr, r_dtArr):
             if lenFil_n[-1] < N:            
                 if r < get_P(dt, Vapp, lenFil_n[-1]+1):
                     lenFil_n.append(lenFil_n[-1]+1)                
@@ -80,21 +87,30 @@ for Vapp in VappArr:
             else:
                 lenFil_n = np.concatenate([lenFil_n, lenFil_n[-1]*np.ones(len(dtArr)-len(lenFil_n)+1)])
                 break
-        lenFil = lenFil_n if len(lenFil) == 0 else np.array(lenFil) + np.array(lenFil_n)  
+        lenFil = np.array(lenFil_n) if len(lenFil) == 0 else np.array(lenFil) + np.array(lenFil_n)  
     lenFil = lenFil / nTrials        
     ax.plot(dtArr, lenFil[1:], label=r'$V_{app}=$'+str(Vapp))
-    
+
+ax.set(xlabel='t', ylabel='length')
+ax.xaxis.label.set_size(22)
+ax.yaxis.label.set_size(22)    
 ax.legend()
+#plt.legend(prop={'size': 16})
+fig.tight_layout()  
 plt.savefig('LenFil(dt, Vapp).pdf') 
-plt.close()
+plt.clf()
 
 # Incubation times
 
 print('Doing incubation times...')
 
+fig = plt.figure(figsize=(4, 8))
+ax = fig.add_subplot()
+
 dtArr       =   np.arange(1., 6.e3, 1.)
-VappArr     =   np.concatenate([np.arange(10., 100., 10.),
-                               np.arange(100., 300., 100.)])
+VappArr     =   np.concatenate([[5.], 
+                               np.arange(10., 100., 20.),
+                               [150., 200.]])
 nTrials     =   200   
 
 tIncMeanArr =   []      # Mean incubation times
@@ -132,9 +148,17 @@ for Vapp in VappArr:
     else:
         VappArr = np.delete(VappArr, 0)
 
-fig, ax = plt.subplots()
-ax.plot(VappArr, tIncMeanArr)
-ax.errorbar(VappArr, tIncMeanArr, yerr=tIncVarArr)
+ax.plot(VappArr, tIncMeanArr, color='black', linestyle='-', linewidth='0.5')
+ax.set(xlabel=r'$V$ (arb. units)', ylabel=r'$\tau_{inc}$ (arb. units)')
+eb = ax.errorbar(VappArr, tIncMeanArr, yerr=tIncVarArr, color='black', fmt='.', markersize=8, capsize=8)
+eb[-1][0].set_linestyle('dotted')
+ax.xaxis.label.set_size(16)
+ax.xaxis.set_ticks(np.arange(0, 220, 40))
+ax.yaxis.label.set_size(16)
+#ax.ticklabel_format(axis='x', style='sci', scilimits=(4,4))
+ax.tick_params(axis='both', which='both', labelsize=16, length=5, width=1)
 ax.set_yscale('log')
+
+fig.tight_layout()
 plt.savefig('tInc(Vapp).pdf') 
 plt.close()
