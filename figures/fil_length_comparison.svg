@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="390.70883mm"
-   height="219.08319mm"
-   viewBox="0 0 390.70884 219.08319"
+   height="213.79915mm"
+   viewBox="0 0 390.70884 213.79915"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -1003,10 +1003,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="1165.3863"
-     inkscape:cy="518.38474"
+     inkscape:cx="868.05897"
+     inkscape:cy="365.94883"
      inkscape:document-units="mm"
-     inkscape:current-layer="g5458"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -1021,7 +1021,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1029,7 +1029,7 @@
      inkscape:label="Livello 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(177.83095,-324.19397)">
+     transform="translate(177.83095,-329.47802)">
     <g
        transform="matrix(0.35277777,0,0,-0.35277777,-179.16071,319.67857)"
        inkscape:label="LenFil(dt, Vapp)_N=50"
@@ -1111,11 +1111,6 @@
                                    transform="translate(-315.50311,-69.441325)"
                                    inkscape:label="LenFil(dt, Vapp)_N=50"
                                    id="g3152">
-                                <path
-                                   inkscape:connector-curvature="0"
-                                   id="path3156"
-                                   style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   d="m 57.24061,123.41695 h 249.175 v 253.54 h -249.175 z" />
                                 <path
                                    inkscape:connector-curvature="0"
                                    id="path3158"
@@ -1430,11 +1425,12 @@
                                 <text
                                    id="text3316"
                                    style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan3314"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 16.455999 34.891998 48.883999 62.875999 69.872002 78.452003 96.888 103.884 117.348 125.092 132.088 144.188 157.718 163.834 169.95 181.412">N=50 (# of cells)</tspan>
                                 </text>
                                 </g>
@@ -1442,14 +1438,14 @@
                                    inkscape:connector-curvature="0"
                                    id="path3318"
                                    style="fill:#ffffff;fill-opacity:0.8;fill-rule:nonzero;stroke:#cccccc;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.8"
-                                   d="M 201.31437,190.5625 H 321.205 c 2.66667,0 4,1.33333 4,4 V 310 c 0,2.66667 -1.33333,4 -4,4 H 201.31437 c -2.66666,0 -4,-1.33333 -4,-4 V 194.5625 c 0,-2.66667 1.33334,-4 4,-4 z" />
+                                   d="M 201.31437,166.5625 H 321.205 c 2.66667,0 4,1.33333 4,4 V 286 c 0,2.66667 -1.33333,4 -4,4 H 201.31437 c -2.66666,0 -4,-1.33333 -4,-4 V 170.5625 c 0,-2.66667 1.33334,-4 4,-4 z" />
                                 <path
                                    inkscape:connector-curvature="0"
                                    id="path3320"
                                    style="fill:none;stroke:#8a2be2;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 205.31437,297.79687 h 40" />
+                                   d="m 205.31437,273.79687 h 40" />
                                 <g
-                                   transform="translate(261.31437,290.79687)"
+                                   transform="translate(261.31437,266.79687)"
                                    id="g3322">
                                 <text
                                    id="text3326"
@@ -1466,9 +1462,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path3328"
                                    style="fill:none;stroke:#6a5acd;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 205.31437,268.4375 h 40" />
+                                   d="m 205.31437,244.4375 h 40" />
                                 <g
-                                   transform="translate(261.31437,261.4375)"
+                                   transform="translate(261.31437,237.4375)"
                                    id="g3330">
                                 <text
                                    id="text3334"
@@ -1485,9 +1481,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path3336"
                                    style="fill:none;stroke:#000080;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 205.31437,239.07812 h 40" />
+                                   d="m 205.31437,215.07812 h 40" />
                                 <g
-                                   transform="translate(261.31437,232.07812)"
+                                   transform="translate(261.31437,208.07812)"
                                    id="g3338">
                                 <text
                                    id="text3342"
@@ -1504,9 +1500,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path3344"
                                    style="fill:none;stroke:#4169e1;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 205.31437,209.71875 h 40" />
+                                   d="m 205.31437,185.71875 h 40" />
                                 <g
-                                   transform="translate(261.31437,202.71875)"
+                                   transform="translate(261.31437,178.71875)"
                                    id="g3346">
                                 <text
                                    id="text3350"
@@ -1754,11 +1750,12 @@
                                 <text
                                    id="text3624"
                                    style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan3622"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 16.455999 34.891998 48.883999 62.875999 76.867996 83.863998 92.444 110.88 117.876 131.34 139.084 146.08 158.17999 171.71001 177.826 183.942 195.40401">N=100 (# of cells)</tspan>
                                 </text>
                                 </g>
@@ -1997,11 +1994,12 @@
                                 <text
                                    id="text3932"
                                    style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan3930"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 16.455999 34.891998 48.883999 62.875999 76.867996 83.863998 92.444 110.88 117.876 131.34 139.084 146.08 158.17999 171.71001 177.826 183.942 195.40401">N=150 (# of cells)</tspan>
                                 </text>
                                 </g>
@@ -2238,28 +2236,12 @@
                                    d="M 86.03,324 H 335.205" />
                                 <g
                                    transform="translate(108.60969,330)"
-                                   id="g4236">
-                                <text
-                                   id="text4240"
-                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
-                                <tspan
-                                   id="tspan4238"
-                                   sodipodi:role="line"
-                                   y="0"
-                                   x="0 16.455999 34.891998 48.883999 62.875999 76.867996 83.863998 92.444 110.88 117.876 131.34 139.084 146.08 158.17999 171.71001 177.826 183.942 195.40401">N=200 (# of cells)</tspan>
-                                </text>
-                                </g>
+                                   id="g4236" />
                                 </g>
                                 <g
                                    transform="translate(-1352.6642,375.77667)"
                                    inkscape:label="LenFil(dt, N)_Vapp=5"
                                    id="g4384">
-                                <path
-                                   inkscape:connector-curvature="0"
-                                   id="path4388"
-                                   style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   d="m 464.83721,59.923863 h 249.175 V 313.46386 h -249.175 z" />
                                 <path
                                    inkscape:connector-curvature="0"
                                    id="path4390"
@@ -2468,12 +2450,13 @@
                                    id="g4544">
                                 <text
                                    id="text4548"
-                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:0.8"
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan4546"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 15.048 33.484001 47.476002 54.472 63.051998 76.538002 85.580002 99.550003 106.546 113.542 127.49 141.438 147.554 156.17799 167.64">V=5 (arb. units)</tspan>
                                 </text>
                                 </g>
@@ -2481,14 +2464,14 @@
                                    inkscape:connector-curvature="0"
                                    id="path4550"
                                    style="fill:#ffffff;fill-opacity:0.8;fill-rule:nonzero;stroke:#cccccc;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.8"
-                                   d="M 187.31437,190.5625 H 321.205 c 2.66667,0 4,1.33333 4,4 V 310 c 0,2.66667 -1.33333,4 -4,4 H 187.31437 c -2.66666,0 -4,-1.33333 -4,-4 V 194.5625 c 0,-2.66667 1.33334,-4 4,-4 z" />
+                                   d="M 187.31437,166.5625 H 321.205 c 2.66667,0 4,1.33333 4,4 V 286 c 0,2.66667 -1.33333,4 -4,4 H 187.31437 c -2.66666,0 -4,-1.33333 -4,-4 V 170.5625 c 0,-2.66667 1.33334,-4 4,-4 z" />
                                 <path
                                    inkscape:connector-curvature="0"
                                    id="path4552"
                                    style="fill:none;stroke:#a52a2a;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 191.31437,297.79687 h 40" />
+                                   d="m 191.31437,273.79687 h 40" />
                                 <g
-                                   transform="translate(247.31437,290.79687)"
+                                   transform="translate(247.31437,266.79687)"
                                    id="g4554">
                                 <text
                                    id="text4558"
@@ -2505,9 +2488,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path4560"
                                    style="fill:none;stroke:#ff0000;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 191.31437,268.4375 h 40" />
+                                   d="m 191.31437,244.4375 h 40" />
                                 <g
-                                   transform="translate(247.31437,261.4375)"
+                                   transform="translate(247.31437,237.4375)"
                                    id="g4562">
                                 <text
                                    id="text4566"
@@ -2524,9 +2507,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path4568"
                                    style="fill:none;stroke:#e9967a;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 191.31437,239.07812 h 40" />
+                                   d="m 191.31437,215.07812 h 40" />
                                 <g
-                                   transform="translate(247.31437,232.07812)"
+                                   transform="translate(247.31437,208.07812)"
                                    id="g4570">
                                 <text
                                    id="text4574"
@@ -2543,9 +2526,9 @@
                                    inkscape:connector-curvature="0"
                                    id="path4576"
                                    style="fill:none;stroke:#a0522d;stroke-width:2.5999999;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                                   d="m 191.31437,209.71875 h 40" />
+                                   d="m 191.31437,185.71875 h 40" />
                                 <g
-                                   transform="translate(247.31437,202.71875)"
+                                   transform="translate(247.31437,178.71875)"
                                    id="g4578">
                                 <text
                                    id="text4582"
@@ -2687,12 +2670,13 @@
                                    id="g4852">
                                 <text
                                    id="text4856"
-                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:0.8"
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan4854"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 15.048 33.484001 47.476002 61.467999 68.463997 77.043999 90.529999 99.571999 113.542 120.538 127.534 141.48199 155.42999 161.54601 170.17 181.632">V=10 (arb. units)</tspan>
                                 </text>
                                 </g>
@@ -2827,12 +2811,13 @@
                                    id="g5160">
                                 <text
                                    id="text5164"
-                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
+                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:0.8"
+                                   transform="scale(1,-1)"
+                                   y="28.5">
                                 <tspan
                                    id="tspan5162"
                                    sodipodi:role="line"
-                                   y="0"
+                                   y="28.5"
                                    x="0 15.048 33.484001 47.476002 61.467999 68.463997 77.043999 90.529999 99.571999 113.542 120.538 127.534 141.48199 155.42999 161.54601 170.17 181.632">V=20 (arb. units)</tspan>
                                 </text>
                                 </g>
@@ -2961,17 +2946,7 @@
                                    d="m -420.47003,339.57355 h 249.175" />
                                 <g
                                    transform="translate(-390.9919,345.57355)"
-                                   id="g5468">
-                                <text
-                                   id="text5472"
-                                   style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-                                   transform="scale(1,-1)">
-                                <tspan
-                                   id="tspan5470"
-                                   sodipodi:role="line"
-                                   y="0"
-                                   x="0 15.048 33.484001 47.476002 61.467999 68.463997 77.043999 90.529999 99.571999 113.542 120.538 127.534 141.48199 155.42999 161.54601 170.17 181.632">V=50 (arb. units)</tspan>
-                                </text>
+                                   id="g5468" />
                                 </g>
                                 </g>
                                 </g>
@@ -2982,7 +2957,14 @@
                                 </g>
                                 </g>
                                 </g>
-                                </g>
+                                <rect
+                                   style="fill:#fffffd;fill-opacity:0.50196081;stroke:none;stroke-width:1.41732287;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8"
+                                   id="rect1485"
+                                   width="201.69643"
+                                   height="21.69643"
+                                   x="436.02997"
+                                   y="-370.37268"
+                                   transform="scale(1,-1)" />
                                 </g>
                                 </g>
                                 </g>
@@ -3008,5 +2990,41 @@
         </g>
       </g>
     </g>
+    <rect
+       style="fill:#fffffd;fill-opacity:0.50196078;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8"
+       id="rect1485-0"
+       width="71.154015"
+       height="7.6540184"
+       x="132.19646"
+       y="334.32397" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="testo"
+     style="stroke-width:2.83464575"
+     transform="matrix(0.35277777,0,0,-0.35277777,-156.75682,52.456826)">
+    <text
+       id="text4240"
+       style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,1323.2477,-141.31223)"
+       y="28.5">
+      <tspan
+         id="tspan4238"
+         sodipodi:role="line"
+         y="28.5"
+         x="0 16.455999 34.891998 48.883999 62.875999 76.867996 83.863998 92.444 110.88 117.876 131.34 139.084 146.08 158.17999 171.71001 177.826 183.942 195.40401">N=200 (# of cells)</tspan>
+    </text>
+    <text
+       id="text5472"
+       style="font-variant:normal;font-weight:normal;font-size:22px;font-family:DejaVuSans;-inkscape-font-specification:DejaVuSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-opacity:0.8"
+       transform="matrix(1,0,0,-1,1330.1462,146.96007)"
+       y="28.5">
+      <tspan
+         id="tspan5470"
+         sodipodi:role="line"
+         y="28.5"
+         x="0 15.048 33.484001 47.476002 61.467999 68.463997 77.043999 90.529999 99.571999 113.542 120.538 127.534 141.48199 155.42999 161.54601 170.17 181.632">V=50 (arb. units)</tspan>
+    </text>
   </g>
 </svg>
