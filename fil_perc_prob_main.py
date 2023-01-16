@@ -8,7 +8,7 @@ T0      =   10.     # Substrate temperature
 Timt    =   30.     # Insulator to metal transition
 RI      =   10.     # Insulating resistivity
 RM      =   1.      # Metallic resistivity
-RL      =   2.      # Load resistivity
+RL      =   5.      # Load resistivity
 N       =   100     # Number of cells
 
 nM      =   np.array(range(0, N))   # Number of metallic cells     
@@ -16,10 +16,13 @@ nI      =   N - nM                  # Number of insulating cells
 RS      =   nM*RM + nI*RI           # Sample resistance 
 
 def get_T(dt, Vapp):
+    '''
     VS      =   RS/(RS + RL)*Vapp   # Sample voltage
     Vi      =   VS*RI/RS            # Insulating cell voltage
     Vi      =   VS/nI
+    '''
     Vi      =   Vapp/nI
+    Vi      =   RI/(RI*nI+RM*nM)*Vapp
     
     return T0 + Vi**2/(RI)*dt
     return T0 + Vi**2/(RI*K)*(1 - np.exp(-K/C*dt))
@@ -33,7 +36,7 @@ def get_P(dt, Vapp, i=N):
     Eb      =   get_Eb(T)
     
     return np.exp(np.sum(-Eb[:i]/T[:i]))
-    
+  
 # Print energy barrier
 fig = plt.figure(figsize=(2, 2))
 ax = fig.add_subplot()
@@ -87,7 +90,7 @@ plt.clf()
 
 
 # Filament length as a function of voltage
-'''
+
 print('Doing filament length as a function of V...')
 
 Narr        =   [50, 100, 150, 200]
@@ -95,6 +98,8 @@ dtArr       =   np.arange(0, 3001, 1)
 VappArr     =   [50., 20., 10., 5.] 
 r_dtArr     =   [np.random.rand() for i in dtArr]
 colors      =   ['blueviolet', 'slateblue', 'navy', 'royalblue']
+labelsize   =   22
+legendsize  =   20
 
 for N in Narr:
     fig = plt.figure(figsize=(5, 5))
@@ -123,22 +128,24 @@ for N in Narr:
                 else:
                     break
             lenFil = np.array(lenFil_n) if len(lenFil) == 0 else np.array(lenFil) + np.array(lenFil_n)  
-        lenFil = lenFil / nTrials        
-        ax.plot(dtArr[:len(lenFil)-1], lenFil[1:], label='V='+str(int(Vapp)), linewidth=2.6, color=c)
+        lenFil = lenFil / nTrials  
+        # Time is normalized for better plotting
+        ax.plot(dtArr[:len(lenFil)-1]/100., lenFil[1:], label='V='+str(int(Vapp)), linewidth=2.6, color=c)
 
-    ax.set(xlabel='Time (arb. units)', ylabel='Filament length (# cells)')
-    ax.xaxis.label.set_size(16)
+    ax.set(xlabel=r'$10^{-2}$ Time (arb. units)', ylabel='Filament length (# cells)')
+    ax.xaxis.label.set_size(labelsize)
     ax.margins(x=0)
-    ax.yaxis.label.set_size(16) 
+    ax.yaxis.label.set_size(labelsize) 
     ax.set_ylim([0, 200])
-    ax.set_xlim([0, 3001])
-    ax.tick_params(axis='both', which='both', labelsize=16, length=5, width=1) 
-    plt.legend(prop={'size': 16})
+    ax.set_xlim([0, 30])
+    ax.tick_params(axis='both', which='both', labelsize=labelsize, length=5, width=1) 
+    ax.xaxis.set_ticks(np.arange(0, 31, 10))
+    plt.legend(prop={'size': legendsize})
     fig.tight_layout()  
     
     # Add space to the top of the title
-    plt.subplots_adjust(top=0.95)    
-    plt.title('N='+str(int(N))+' (# of cells)', fontsize=15)
+    plt.subplots_adjust(top=0.90)    
+    plt.title('N='+str(int(N))+' (# of cells)', fontsize=labelsize)
     
     plt.savefig('LenFil(dt, Vapp)_N='+str(N)+'.pdf') 
     plt.clf()
@@ -175,29 +182,30 @@ for Vapp in VappArr:
                 else:
                     break
             lenFil = np.array(lenFil_n) if len(lenFil) == 0 else np.array(lenFil) + np.array(lenFil_n)  
-        lenFil = lenFil / nTrials        
-        ax.plot(dtArr[:len(lenFil)-1], lenFil[1:], label='N='+str(N), linewidth=2.6, color=c)
+        lenFil = lenFil / nTrials     
+        # Time is normalized for better plotting    
+        ax.plot(dtArr[:len(lenFil)-1]/100., lenFil[1:], label='N='+str(N), linewidth=2.6, color=c)
 
-    ax.set(xlabel='Time (arb. units)', ylabel='Filament length (# cells)')
-    ax.xaxis.label.set_size(16)
+    ax.set(xlabel=r'$10^{-2}$ Time (arb. units)', ylabel='Filament length (# cells)')
+    ax.xaxis.label.set_size(labelsize)
     ax.margins(x=0)
-    ax.yaxis.label.set_size(16) 
+    ax.yaxis.label.set_size(labelsize) 
     ax.set_ylim([0, 200])
-    ax.set_xlim([0, 3001])
-    ax.tick_params(axis='both', which='both', labelsize=16, length=5, width=1) 
-    plt.legend(prop={'size': 16})
+    ax.set_xlim([0, 30])
+    ax.tick_params(axis='both', which='both', labelsize=labelsize, length=5, width=1) 
+    ax.xaxis.set_ticks(np.arange(0, 31, 10))
+    plt.legend(prop={'size': legendsize})
     fig.tight_layout()  
     
     # Add space to the top of the title
-    plt.subplots_adjust(top=0.95)    
-    plt.title('V='+str(int(Vapp))+' (arb. units)', fontsize=15)
+    plt.subplots_adjust(top=0.90)    
+    plt.title('V='+str(int(Vapp))+' (arb. units)', fontsize=labelsize)
     
     plt.savefig('LenFil(dt, N)_Vapp='+str(int(Vapp))+'.pdf') 
     plt.clf()
-'''
 
 # Incubation times
-'''
+
 print('Doing incubation times...')
 
 fig =   plt.figure(figsize=(3, 6))
@@ -277,4 +285,3 @@ fig.tight_layout()
 #plt.legend(prop={'size': 16})
 plt.savefig('tInc(Vapp).pdf') 
 plt.close()
-'''
