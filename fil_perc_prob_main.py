@@ -208,14 +208,24 @@ for Vapp in VappArr:
 
 print('Doing incubation times...')
 
+<<<<<<< Updated upstream
 fig =   plt.figure(figsize=(3, 6))
 ax  =   fig.add_subplot()
+=======
+fig = plt.figure(figsize=(3, 6))
+ax = fig.add_subplot()
+>>>>>>> Stashed changes
 
 colors      =   ['brown', 'red', 'darksalmon', 'sienna', 'sandybrown']
 colors      =   ['black']
 Narr        =   [50, 100, 150, 200]
 Narr        =   [100]
 dtArr       =   np.arange(1., 6.e3, 1.)
+<<<<<<< Updated upstream
+=======
+VappArr     =   [5., 10., 30., 50., 80., 100., 150., 200. ]
+nTrials     =   400   
+>>>>>>> Stashed changes
 
 nTrials     =   400   
 
@@ -247,6 +257,7 @@ for N, c in zip(Narr, colors):
                     break
         tIncArr =   np.array(tIncArr)
         
+<<<<<<< Updated upstream
         # If we observed an event...
         if len(tIncArr) != 0:   
             print('n events='+str(len(tIncArr)))
@@ -276,6 +287,21 @@ ax.set(xlabel=r'$10^{-1}$ V (arb. units)', ylabel=r'$\tau_{inc}$ (arb. units)')
 ax.xaxis.label.set_size(16)
 ax.xaxis.set_ticks(np.arange(0, 22, 5))
 ax.set_xlim([-2, 22])
+=======
+        #print(tIncArr)        
+        print('tInc mean='+str(np.round(tIncMeanArr[-1],2)))
+        print('tInc var='+str(np.round(tIncVarArr[-1],2)))
+        print('tInc 3*std='+str(np.round(tIncStdArr[-1],2)))
+    else:
+        VappArr = np.delete(VappArr, 0)
+
+ax.plot(VappArr, tIncMeanArr, color='black', linestyle='-', linewidth='0.5')
+ax.set(xlabel='V (arb. units)', ylabel=r'$\tau_{inc}$ (arb. units)')
+eb = ax.errorbar(VappArr, tIncMeanArr, yerr=tIncVarArr, color='black', fmt='.', markersize=8, capsize=8)
+eb[-1][0].set_linestyle('dotted')
+ax.xaxis.label.set_size(16)
+ax.xaxis.set_ticks(np.arange(0, 220, 60))
+>>>>>>> Stashed changes
 ax.yaxis.label.set_size(16)
 #ax.ticklabel_format(axis='x', style='sci', scilimits=(4,4))
 ax.tick_params(axis='both', which='both', labelsize=16, length=5, width=1)
